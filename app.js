@@ -1,48 +1,115 @@
+const express = require('express');
+const app = express();
+app.get('/persone/me',(req,res) => {
+    console.log(req.params);
 
-function checkBrackets(string) {
+    res.send({
+        name: 'Hasik',
+        age: 17,
+        email: 'hasikgyan01@gmail.com',
 
-  let a = '(';
-  let b = '{';
-  let c = '[';
-  let A = ')';
-  let B = '}';
-  let C = ']';
+    })
+})
+app.get('person/me/name' , (req,res) => {
+  res.send({
+      name:['Karo','Tarel','Saq','Gexam','Vardan','Hovas']
+  })
+})
+app.listen(060606);
 
-  let arr = [];
 
-  for(let i = 0; i < string.length; i++) {
 
-    if((arr[arr.length-1] == a && string[i] == A) || (arr[arr.length-1] == b && string[i] == B) || (arr[arr.length-1] == c && string[i] == C) ) {
 
-          arr.pop();
 
-          console.log(arr);
 
-    } else if(string[i] == a || string[i] == b || string[i] == c) {
 
-          arr.push(string[i]);
 
-            console.log(arr);}
-      else {
-        continue;
-      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function checkBrackets(string) {
+
+//   let a = '(';
+//   let b = '{';
+//   let c = '[';
+//   let A = ')';
+//   let B = '}';
+//   let C = ']';
+
+//   let arr = [];
+
+//   for(let i = 0; i < string.length; i++) {
+
+//     if((arr[arr.length-1] == a && string[i] == A) || (arr[arr.length-1] == b && string[i] == B) || (arr[arr.length-1] == c && string[i] == C) ) {
+
+//           arr.pop();
+
+//           console.log(arr);
+
+//     } else if(string[i] == a || string[i] == b || string[i] == c) {
+
+//           arr.push(string[i]);
+
+//             console.log(arr);}
+//       else {
+//         continue;
+//       }
         
     
       
     
-  }
-  return arr.length;
-}
+//   }
+//   return arr.length;
+// }
 
 
-  try { if(checkBrackets('{{jhdbk(hcdbkj[kjdhn]dskjb{djhkbc}dkcbj()kbdcbk)}}') == 0){
-    console.log("Quantity of brackets are correct!");
+//   try { if(checkBrackets('{{jhdbk(hcdbkj[kjdhn]dskjb{djhkbc}dkcbj()kbdcbk)}}') == 0){
+//     console.log("Quantity of brackets are correct!");
     
     
-  } }
-  catch {
-    throw new Error("Quantity of brackets aren't correct!");
-  }
+//   } }
+//   catch {
+//     throw new Error("Quantity of brackets aren't correct!");
+//   }
   
   
   
